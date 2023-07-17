@@ -109,6 +109,8 @@ export function useInteraction(
 
     // NOTE : Wasn't sure about matchesMask(...)
     if (isParentOrGroup) {
+      //@ts-ignore
+      console.log("Logging disabled")
       handlers.disabled = function (event: GestureResponderEvent) {
         dispatch({ type: "disabled", value: true });
       };
